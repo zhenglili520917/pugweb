@@ -1,9 +1,10 @@
 //- mixin 區塊
 //- 產生標題(英文標題,中文標題)
 mixin title(eng,chin)
-    h2(class="title")=eng
-    h1=chin
-    img(src="imgs/line.png", alt="線條")
+    div(class="title-box")
+        h2(class="title")=eng
+        h1(class="eng")=chin
+        img(src="imgs/line.png", alt="線條")
 
 
 <!DOCTYPE html>

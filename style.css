@@ -4,7 +4,7 @@ padding: 0;
 font-family: 微軟正黑體;
 }
 
-#body{
+body{
     background-color: #faf7f0;
 }
 
@@ -13,7 +13,7 @@ font-family: 微軟正黑體;
     background-size: 100vw;
     background-repeat: no-repeat;
     /* calc 計算 - css 計算數字 + - */
-    height: calc(100vw / 2.4);
+    height: calc(100vw / 2.1);
     width: 100vw;
 }
 
@@ -49,9 +49,10 @@ nav {
 }
 
 /* 品牌區塊 */
-#brands{
+.title-box{
     text-align: center;
     color: #58451a;
+    letter-spacing: 5px;
 }
 
 /* 偽元素 前面 */
@@ -68,10 +69,17 @@ nav {
 
 #brands p {
     margin: 0 auto;
-    width: 500px;
+    width: 570px;
     padding: 30px;
     line-height: 2;
-    /* 透明度 */
+    /* 透明度 0-1 */
     opacity: 0.6;
-
+    /* 字距 */
+    letter-spacing: 6px;
 }
+
+.eng{
+    margin-top: 10px;
+    font-size: 33px;
+}
+
