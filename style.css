@@ -6,8 +6,10 @@ font-family: 微軟正黑體;
 
 #banner{
     background-image: url(imgs/Banner.jpg);
-    background-size: cover;
-    height: 700px;
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    /* calc 計算 - css 計算數字 + - */
+    height: calc(100vw / 2.4);
     width: 100vw;
 }
 
@@ -40,4 +42,10 @@ nav {
     width: 80%;
     margin: 0 auto;
     padding: 50px 0;
+}
+
+/* 品牌區塊 */
+#brands{
+    text-align: center;
+    color: #58451a;
 }
