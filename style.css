@@ -10,3 +10,34 @@ font-family: 微軟正黑體;
     height: 700px;
     width: 100vw;
 }
+
+#logo {
+    width: 300px;
+}
+
+#link {
+    float: right;
+    padding: 40px 0;
+}
+
+#link a {
+    color: #fff;
+    text-decoration: none;
+    /* 內距：上下 左右 */
+    padding: 5px 15px;
+    /* 字體粗細 0 - 900 */
+    font-weight: 800;
+}
+
+#link a:hover {
+    background-color: #ffe048;
+    color: black;
+    transition: 0.6s;
+}
+
+/* 導覽列區塊 */
+nav {
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 0;
+}
