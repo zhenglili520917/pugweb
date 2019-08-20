@@ -87,3 +87,17 @@ nav {
     font-size: 33px;
 }
 
+/* 產品區塊 */
+#product{
+    /* 模式:格線 */
+    display: grid;
+    /* 格線-框架-欄位:欄位尺寸 欄位尺寸 欄位尺寸 */
+    grid-template-columns: auto auto auto;
+    /* 格線間隙 */
+    grid-gap: 20px;
+}
+
+#product img{
+    /* 圖片寬度 */
+    width: 100%;
+}
