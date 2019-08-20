@@ -6,6 +6,7 @@ font-family: 微軟正黑體;
 
 body{
     background-color: #faf7f0;
+    text-align: center;
 }
 
 #banner{
@@ -94,10 +95,65 @@ nav {
     /* 格線-框架-欄位:欄位尺寸 欄位尺寸 欄位尺寸 */
     grid-template-columns: auto auto auto;
     /* 格線間隙 */
-    grid-gap: 20px;
+    grid-gap: 30px;
+    padding: 50px;
+    width: 920px;
+    margin: 0 auto;
+    text-align: left;
 }
 
 #product img{
     /* 圖片寬度 */
     width: 100%;
+}
+
+.product-box a{
+    text-decoration: none;
+}
+
+.product-box h2{
+    color:#fbb024;
+    letter-spacing: 3px;
+    font-size: 1.5em;
+}
+
+.product-box hr{
+    height: 2px;
+    background-color:  #bdac90;
+    border: 0;
+    margin: 15px 0;
+}
+
+.product-box p{
+    color: #58451a;
+    font-size: 0.9em;
+    padding: 10px 0;
+    line-height: 1.8;
+}
+
+/* 按鈕效果 */
+/* 行內元素 不能條寬高 */
+.btn-big{
+    display: inline-block;
+    background-color: #642200;
+    color: #fff;
+    text-decoration: none;
+    padding: 20px 100px;
+    border: 2px solid #642200;
+    font-weight: 900;
+    transition: 0.8s;
+    font-size: 14px;
+}
+
+.btn-big:hover{
+    background-color: transparent;
+    color: #642200;
+}
+
+/* 重複圖片線條效果 */
+.small-line{
+    background-image: url(imgs/small-line.png);
+    height: 5px;
+    background-repeat: repeat-x;
+    margin-top: 80px;
 }
