@@ -1,21 +1,23 @@
-*{
-margin: 0;
-padding: 0;
-font-family: 微軟正黑體;
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 微軟正黑體;
+    box-sizing: border-box;
 }
 
-body{
+body {
     background-color: #faf7f0;
     text-align: center;
 }
 
-#banner{
-    background-image: url(imgs/Banner.jpg);
+#banner {
+    background-image: url(imgs/banner.jpg);
     background-size: 100vw;
+    /* bgr 背景圖片重複 */
     background-repeat: no-repeat;
-    /* calc 計算 - css 計算數字 + - */
-    height: calc(100vw / 2.1);
     width: 100vw;
+    /* calc 計算 - CSS 計算數字 + - * / */
+    height: calc(100vw / 2.2);
 }
 
 .logo {
@@ -47,126 +49,179 @@ nav {
     width: 80%;
     margin: 0 auto;
     padding: 50px 0;
-}
-
-#brands{
-    text-align: center;
+    text-align: left;
 }
 
 /* 品牌區塊 */
-.title-box{
+#brands {
     text-align: center;
     color: #58451a;
-    letter-spacing: 5px;
-}
-
-/* 偽元素 前面 */
-.title::before{
-    content:"＼";
-    /* 前面距離 */
-    padding-right: 20px;
-}
-
-.title::after{
-    content:"／";
-    padding-left: 20px;
 }
 
 #brands p {
-    margin: 0 auto;
     width: 570px;
+    margin: 0 auto;
     padding: 30px;
     line-height: 2;
-    /* 透明度 0-1 */
+    /* 透明度 0 - 1 */
     opacity: 0.6;
     /* 字距 */
     letter-spacing: 6px;
 }
 
-.eng{
-    margin-top: 10px;
-    font-size: 33px;
+
+/* 標題區塊 */
+.title-box {
+    text-align: center;
+    color: #58451a;
+}
+.title {
+    font-size: 1.5em;
+    padding: 10px 0;
+}
+
+.title::before {
+    content: "＼";
+    padding-right: 20px;
+}
+
+.title::after {
+    content: "／";
+    padding-left: 20px;
+}
+
+.title-box h1 {
+    font-size: 1.6em;
 }
 
 /* 產品區塊 */
-#product{
-    /* 模式:格線 */
+#product {
+    /* 顯示模式：格線 */
     display: grid;
-    /* 格線-框架-欄位:欄位尺寸 欄位尺寸 欄位尺寸 */
+    /* 格線-框架-欄位：欄位尺寸 欄位尺寸 欄位尺寸 */
     grid-template-columns: auto auto auto;
-    /* 格線間隙 */
-    grid-gap: 30px;
-    padding: 50px;
+    /* 格線-間隙 */
+    grid-gap: 50px;
+
+    padding: 30px;
+
     width: 920px;
+
     margin: 0 auto;
+
     text-align: left;
 }
 
-#product img{
-    /* 圖片寬度 */
+#product img {
     width: 100%;
 }
 
-.product-box a{
+/* 產品盒子 */
+.product-box a {
     text-decoration: none;
 }
-
-.product-box h2{
-    color:#fbb024;
+.product-box h2 {
+    color: #fbab13;
     letter-spacing: 3px;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
-.product-box hr{
+.product-box hr {
     height: 2px;
-    background-color:  #bdac90;
+    background-color: #bdac90;
     border: 0;
-    margin: 15px 0;
+    margin: 20px 0;
 }
 
-.product-box p{
+.product-box p {
     color: #58451a;
-    font-size: 0.9em;
+    font-size: 0.8em;
     padding: 10px 0;
     line-height: 1.8;
 }
 
 /* 按鈕效果 */
-/* 行內元素 不能條寬高 */
-.btn-big{
+/* a 行內元素 - 不能調寬高 */
+.btn-big {
     display: inline-block;
     background-color: #642200;
     color: #fff;
     text-decoration: none;
-    padding: 20px 100px;
+    padding: 10px 130px;
     border: 2px solid #642200;
-    font-weight: 900;
+    font-weight: 700;
+    margin: 50px 0 90px 0;
     transition: 0.8s;
-    font-size: 14px;
 }
 
-.btn-big:hover{
+.btn-big:hover {
     background-color: transparent;
     color: #642200;
 }
 
 /* 重複圖片線條效果 */
-.small-line{
+.small-line {
     background-image: url(imgs/small-line.png);
     height: 5px;
     background-repeat: repeat-x;
-    margin-top: 80px;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
 }
 
-footer{
+footer {
     background-color: #642200;
     color: #fff;
     margin-top: 100px;
 }
-
-footer #copy{
+footer #copy {
     padding-top: 50px;
     font-size: 0.5em;
     text-align: center;
+}
+
+/* RWD */
+/* 當螢幕寬度大於等於 1024 像素 - 桌機 */
+@media screen and (min-width: 1024px) {
+  
+}
+
+/* 當螢幕寬度小於等於 1023 像素 - 平板 */
+@media screen and (max-width: 1023px) {
+    #product {
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+    }
+}
+
+/* 當螢幕寬度小於等於 767 像素 - 手機 */
+@media screen and (max-width: 767px) {
+    #product {
+        grid-template-columns: 1fr;     
+        width: 100%;
+    }
+    #brands {
+        width: 100%;
+    }
+    #brands p {
+        width: 100%;
+    }
+    /* > 裡面第一層元素 */
+    #brands > img {
+        width: 100%;
+    }
+}
+
+#banner {
+    background-position: center 0;
+}
+nav {
+    text-align: center;
+    padding: 10px 0;
+}
+.logo {
+    width: 200px;
+}
+.link {
+    float: none;
+    padding: 10px 0;
+    }
 }

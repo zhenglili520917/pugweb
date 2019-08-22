@@ -1,2 +1,2 @@
-# pugweb
-使用 pug 設計網站
+# PugWeb
+使用 PUG 設計網站
